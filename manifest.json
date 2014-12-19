@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+
+	"name": "En_De",
+	"description": "Will translate De to En by hover and vice versa",
+
+	"version":"1.0",
+
+	"browser_action": {
+		"default_icon": "german-flag-small.png",
+		"default_popup": "popup.html"
+	}
+
+}
