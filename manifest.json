@@ -9,6 +9,10 @@
 	"browser_action": {
 		"default_icon": "german-flag-small.png",
 		"default_popup": "popup.html"
-	}
+	},
+
+	"permissions": [
+		"tabs"
+	]
 
 }
