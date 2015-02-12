@@ -21,10 +21,18 @@ $('p').each(function() {
 
 // bind to each span
 var SAVED;
+var APIKey = "SPOOF"
 $('p span').mousedown(
     function() {
+    	var req = new XMLHttpRequest();
+    	var url = "https://translate.yandex.net/api/v1.5/tr/translate?key=" + APIKey + "&lang=de-en&text=" + $(this).html();
+    	req.open("GET", url, false);
+    	req.setRequestHeader('Content-Type', 'text/xml');
+    	req.send();
+    	xmlResponse = req.responseXML;
+    	var newText = xmlResponse.childNodes['0'].textContent;
     	SAVED = $(this).html();
-    	$(this).html("<span>PHIL</span>");
+    	$(this).html("<span>" + newText + "</span>");
     }
  );
 $('p span').mouseup(
