@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 
 	"name": "En_De",
-	"description": "Will translate De to En by hover and vice versa",
+	"description": "Will translate De to En",
 
 	"version":"1.0",
 
@@ -24,6 +24,7 @@
 				"https://*/*"
 
 			],
+			
 			"js": ["jquery.min.js", "content.js"],
 			"run_at": "document_end"
 		}
