@@ -12,7 +12,23 @@ console.log("In the content script");
 	// anotherList[i].innerHTML = "Phil";
 // }
 
+// Adapted from accepted solution on: 
+//http://stackoverflow.com/questions/2444430/how-to-get-a-word-under-cursor-using-javascript
+$('p').each(function() {
+    var $this = $(this);
+    $this.html($this.text().replace(/\b(\w+)\b/g, "<span>$1</span>"));
+});
 
-
-
-//console.log(newEl);
+// bind to each span
+var SAVED;
+$('p span').mousedown(
+    function() {
+    	SAVED = $(this).html();
+    	$(this).html("<span>PHIL</span>");
+    }
+ );
+$('p span').mouseup(
+	function() {
+		$(this).html("<span>" + SAVED + "</span>");
+	}
+);
