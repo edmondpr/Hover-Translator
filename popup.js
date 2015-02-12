@@ -1,5 +1,3 @@
-console.log("I am Phil!");
-
 
 function wasClicked() {
 	console.log("I was cliked!");
