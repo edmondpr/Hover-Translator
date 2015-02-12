@@ -1,7 +1,21 @@
 console.log("In the content script");
 
-var APIKey = "spoff"
+var APIKey = "SPOOF";
 $('p, h1, h2, h3').hover(function() {
+    var descendants = this.getElementsByTagName("*"); // Get all descendants
+
+    /* Don't do anythig if a link is present */
+    if (this.nodeName == "A") {
+        return;
+    }
+
+    for (var i = 0; i < descendants.length; i++) {
+        if (descendants[i].nodeName == "A") {
+            return;
+        }
+    }
+    /*******/
+
     $(this).html($(this).text().replace(/\b(\w+)\b/g, "<span>$1</span>"));
     $('p span, h1 span, h2 span, h3 span').hover(function(){
         var req = new XMLHttpRequest();
