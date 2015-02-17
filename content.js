@@ -15,12 +15,13 @@ $('p, h1, h2, h3').each(function() {
         }
     }
 
-    $(this).html($(this).text().replace(/\b(\w+)\b/g, "<span>$1</span>"));
+    $(this).html($(this).text().replace(/\b(\S+)\b/g, "<span>$1</span>"));
 });
 
 
 $('p span, h1 span, h2 span, h3 span').hover(function(){
     // translate
+    console.log($(this).html());
     var reqTrans = new XMLHttpRequest();
     var urlTrans = "https://translate.yandex.net/api/v1.5/tr/translate?key=" + APIKey + "&lang=de-en&text=" + $(this).html();
     reqTrans.open("GET", urlTrans, false);
