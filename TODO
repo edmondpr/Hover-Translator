@@ -1,1 +1,0 @@
-Detect links by stepping through a members nodes and child nodes and calling that nodeName function or something. Write a beautiful recursive function to do this. Don't split links!
