@@ -11,11 +11,11 @@ The Chrome extension packaged here automatically translates the word underneath 
 ### Use
 Install the extension into Chrome.
 
-### Caveat
-This extension is invasive by necessity by wrapping all text elements in SPAN elements. This unavoidably breaks certain parts of websites.
+### Caveats
+This extension is invasive by necessity by wrapping all text elements in SPAN elements. This unavoidably breaks certain parts of websites. It works best with sites with plain HTML as possible.
 
 ### Acknowledgments
 I am grateful to [Yandex Translate](https://translate.yandex.com/) for keeping their translate API free and easy to use.
 
 ### Ongoing Development
-1. Add off switch to extension so that it can be disabled more easily than diving into Chrome settings.
+1. Add on/off switch to extension so that it can be disabled more easily than diving into Chrome settings.
