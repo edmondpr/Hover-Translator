@@ -1,5 +1,5 @@
 # Hover Translator - Google Chrome Extension
-## Philip Braunstein (pbraunstein12@gmail.com)
+##### Philip Braunstein (pbraunstein12@gmail.com)
 
 ### Introduction
 21st Century foreign language learners are at an immense advantage because of the vast availability of foreign language content available on the web. Language learners benefit from reading online newspapers and similar material in their language of choice. 
